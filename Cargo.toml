@@ -22,13 +22,8 @@ once_cell = "1"
 str-utils = "0.1"
 enum-ordinalize = "3.1"
 ico = "0.1"
-magick_rust_014_dep = { package = "magick_rust", version = "0.14", optional = true }
-magick_rust_013_dep = { package = "magick_rust", version = "0.13", optional = true }
+magick_rust = { git = "https://github.com/nlfiedler/magick-rust" }
 
 [features]
-default = ["none-background", "magick_rust"]
+default = ["none-background"]
 none-background = []
-
-magick_rust = ["magick_rust_013"]
-magick_rust_014 = ["magick_rust_014_dep"]
-magick_rust_013 = ["magick_rust_013_dep"]
